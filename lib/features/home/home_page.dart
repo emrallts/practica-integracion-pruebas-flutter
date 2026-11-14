@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.logout)),
         ]),
         body: StreamBuilder<List<Task>>(
-          stream: widget.repository.watchTasks(widget.uid),
+          stream: _tasks,
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
