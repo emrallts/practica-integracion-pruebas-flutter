@@ -1,6 +1,7 @@
 String? validateTaskTitle(String? value) {
   final text = value?.trim() ?? '';
   if (text.isEmpty) return 'El título es obligatorio';
+  if (text.length < 3) return 'Escribe al menos 3 caracteres';
   if (text.length > 80) return 'Máximo 80 caracteres';
   return null;
 }
